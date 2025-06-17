@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Для самой особенной девочки! 💖</title>
+    <style>
+        body {
+            background: linear-gradient(180deg, #1a472a 0%, #2d5a3f 50%, #3d6b4f 100%);
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255,255,255,0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+            padding: 40px 30px;
+            text-align: center;
+            max-width: 600px;
+            width: 90%;
+            margin: 20px auto;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            animation: float 6s ease-in-out infinite;
+            position: relative;
+            overflow: visible;
+        }
+
+        .card::before {
+            content: '🌿';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 1.5em;
+            opacity: 0.3;
+        }
+
+        .card::after {
+            content: '🍃';
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 1.5em;
+            opacity: 0.3;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        h1 {
+            color: #2d5a3f;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        } 
+
+        p {
+            color: #1a472a;
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin: 15px 0;
+        }
+
+        .heart {
+            font-size: 3em;
+            color: #2d5a3f;
+            animation: pulse 1.5s infinite;
+            margin: 20px 0;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        .sparkle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: #fff;
+            animation: sparkle 2s linear infinite;
+        }
+
+        @keyframes sparkle {
+            0% { transform: scale(0); opacity: 0; }
+            50% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(0); opacity: 0; }
+        }
+
+        .section {
+            margin: 30px 0;
+            padding: 20px;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(45, 90, 63, 0.2);
+            position: relative;
+        }
+
+        .section::before {
+            content: '🌱';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            font-size: 1.2em;
+            opacity: 0.5;
+        }
+
+        .emoji {
+            font-size: 2em;
+            margin: 10px;
+            display: inline-block;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .quote {
+            font-style: italic;
+            color: #2d5a3f;
+            margin: 20px 0;
+            font-size: 1.1em;
+            position: relative;
+        }
+
+        .quote::before {
+            content: '🌿';
+            position: absolute;
+            left: -20px;
+            top: 0;
+            font-size: 1.2em;
+            opacity: 0.5;
+        }
+
+        .quote::after {
+            content: '🍃';
+            position: absolute;
+            right: -20px;
+            bottom: 0;
+            font-size: 1.2em;
+            opacity: 0.5;
+        }
+
+        .cat {
+            position: fixed;
+            font-size: 3em;
+            user-select: none;
+            pointer-events: none;
+            animation: fall linear forwards;
+            z-index: 9999;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-100px) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(calc(100vh + 100px)) rotate(360deg);
+                opacity: 1;
+            }
+        }
+
+        /* Добавляем лесные элементы */
+        .forest-element {
+            position: fixed;
+            font-size: 2em;
+            opacity: 0.2;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .forest-element:nth-child(1) { top: 10%; left: 5%; }
+        .forest-element:nth-child(2) { top: 20%; right: 10%; }
+        .forest-element:nth-child(3) { top: 40%; left: 15%; }
+        .forest-element:nth-child(4) { top: 60%; right: 5%; }
+        .forest-element:nth-child(5) { top: 80%; left: 10%; }
+
+        /* Добавляем стили для лиан */
+        .vines {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            z-index: 2;
+            overflow: visible;
+        }
+
+        .vine {
+            position: absolute;
+            font-size: 2.5em;
+            opacity: 0.9;
+            animation: vineGrow 3s ease-in-out infinite;
+            filter: brightness(0.7) contrast(1.3);
+        }
+
+        .vine-left {
+            left: -40px;
+            top: 15%;
+            transform: rotate(-15deg);
+            animation-delay: 0s;
+        }
+
+        .vine-right {
+            right: -40px;
+            top: 35%;
+            transform: rotate(15deg);
+            animation-delay: 1s;
+        }
+
+        .vine-top {
+            top: -40px;
+            left: 25%;
+            transform: rotate(90deg);
+            animation-delay: 0.5s;
+        }
+
+        .vine-bottom {
+            bottom: -40px;
+            left: 55%;
+            transform: rotate(-90deg);
+            animation-delay: 1.5s;
+        }
+
+        @keyframes vineGrow {
+            0% {
+                transform: scale(0.8) rotate(var(--rotation));
+                opacity: 0.8;
+            }
+            50% {
+                transform: scale(1.1) rotate(var(--rotation));
+                opacity: 0.95;
+            }
+            100% {
+                transform: scale(0.8) rotate(var(--rotation));
+                opacity: 0.8;
+            }
+        }
+
+        .vine-part {
+            display: inline-block;
+            animation: vineWave 2s ease-in-out infinite;
+            animation-delay: calc(var(--delay) * 0.2s);
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+            margin: 0 -5px;
+        }
+
+        @keyframes vineWave {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-5px) rotate(5deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Добавляем лесные элементы -->
+    <div class="forest-element">🌲</div>
+    <div class="forest-element">🌳</div>
+    <div class="forest-element">🌴</div>
+    <div class="forest-element">🌿</div>
+    <div class="forest-element">🍃</div>
+
+    <div class="card">
+        <!-- Добавляем лианы -->
+        <div class="vines">
+            <div class="vine vine-left" style="--rotation: -15deg">
+                <span class="vine-part" style="--delay: 1">🌿</span>
+                <span class="vine-part" style="--delay: 2">🌿</span>
+                <span class="vine-part" style="--delay: 3">🌿</span>
+                <span class="vine-part" style="--delay: 4">🌿</span>
+                <span class="vine-part" style="--delay: 5">🌿</span>
+            </div>
+            <div class="vine vine-right" style="--rotation: 15deg">
+                <span class="vine-part" style="--delay: 1">🌿</span>
+                <span class="vine-part" style="--delay: 2">🌿</span>
+                <span class="vine-part" style="--delay: 3">🌿</span>
+                <span class="vine-part" style="--delay: 4">🌿</span>
+                <span class="vine-part" style="--delay: 5">🌿</span>
+            </div>
+            <div class="vine vine-top" style="--rotation: 90deg">
+                <span class="vine-part" style="--delay: 1">🌿</span>
+                <span class="vine-part" style="--delay: 2">🌿</span>
+                <span class="vine-part" style="--delay: 3">🌿</span>
+                <span class="vine-part" style="--delay: 4">🌿</span>
+                <span class="vine-part" style="--delay: 5">🌿</span>
+            </div>
+            <div class="vine vine-bottom" style="--rotation: -90deg">
+                <span class="vine-part" style="--delay: 1">🌿</span>
+                <span class="vine-part" style="--delay: 2">🌿</span>
+                <span class="vine-part" style="--delay: 3">🌿</span>
+                <span class="vine-part" style="--delay: 4">🌿</span>
+                <span class="vine-part" style="--delay: 5">🌿</span>
+            </div>
+        </div>
+
+        <div class="heart">💖</div>
+        <h1>Для самой особенной девочки!</h1>
+        
+        <div class="section">
+            <p>
+                Привет, моя дорогая! 🌟<br>
+                Я так рад, что могу написать тебе эти слова.<br>
+                Твоя улыбка всегда поднимает мне настроение,<br>
+                А твоя доброта вдохновляет меня каждый день.
+            </p>
+        </div>
+
+        <div class="section">
+            <p>
+                Знаешь, что меня в тебе больше всего восхищает?<br>
+                <span class="emoji">✨</span> Твоя искренняя доброта ко всем вокруг<br>
+                <span class="emoji">💫</span> Как ты умеешь мечтать и фантазировать<br>
+                <span class="emoji">🌟</span> Твоя мудрость не по годам<br>
+                <span class="emoji">💝</span> Твоё большое и открытое сердце
+            </p>
+        </div>
+
+        <div class="section">
+            <p class="quote">
+                "Знаешь, иногда я смотрю на тебя и думаю:<br>
+                Как же мне повезло знать такого удивительного человека!"
+            </p>
+        </div>
+
+        <div class="section">
+            <p>
+                Я очень хочу, чтобы в твоей жизни было:<br>
+                <span class="emoji">🌈</span> Много радостных моментов и счастливых дней<br>
+                <span class="emoji">🎀</span> Красивых воспоминаний и приятных сюрпризов<br>
+                <span class="emoji">🎁</span> Исполнения всех твоих желаний<br>
+                <span class="emoji">💫</span> Людей, которые ценят тебя так же, как я
+            </p>
+        </div>
+
+        <div class="section">
+            <p>
+                Ты знаешь, я всегда буду рядом,<br>
+                Поддерживать тебя в любых начинаниях,<br>
+                Радоваться твоим успехам,<br>
+                И верить в тебя, даже когда ты сама сомневаешься.
+            </p>
+        </div>
+
+        <div class="section">
+            <p>
+                С любовью и самыми тёплыми пожеланиями,<br>
+                Твой друг ❤️ 
+            </p>
+        </div>
+
+        <div class="heart">💝</div>
+    </div>
+
+    <script>
+        // Add sparkles
+        function createSparkle() {
+            const sparkle = document.createElement('div');
+            sparkle.className = 'sparkle';
+            sparkle.style.left = Math.random() * window.innerWidth + 'px';
+            sparkle.style.top = Math.random() * window.innerHeight + 'px';
+            document.body.appendChild(sparkle);
+            setTimeout(() => sparkle.remove(), 2000);
+        }
+        setInterval(createSparkle, 300);
+
+        // Add falling cats
+        const cats = ['🐱', '😺', '😸',  '😻', '😼', '😽', '😿', '😾'];
+        
+        function createCat() {
+            const cat = document.createElement('div');
+            cat.className = 'cat';
+            cat.textContent = cats[Math.floor(Math.random() * cats.length)];
+            cat.style.left = Math.random() * (window.innerWidth - 100) + 'px';
+            cat.style.animationDuration = (Math.random() * 2 + 9) + 's';
+            document.body.appendChild(cat);
+            
+            // Remove cat after animation
+            setTimeout(() => {
+                cat.remove();
+            }, 11000);
+        }
+
+        // Create cats periodically
+        setInterval(createCat, 1000);
+
+        // Debug: Log when cats are created
+        console.log('Cat animation started');
+    </script>
+</body>
+</html>
